@@ -14,11 +14,15 @@ This is an extension of [Header Align](https://github.com/weibeld/webdesign-head
 
 ## Summary
 
+There are two versions of the example header. In **Header 1**, the links encompass only the visible content, and not more, whereas in **Header 2**, the links extend to the top and bottom of the header.
+
+Both versions can be achieved with flexbox layouts, however, the groups and elements need to be laid out sligtly different, most importantly, along the options `align-items: stretch` vs `align-items: center`, and `padding` vs `margin`.
+
 ### Define a "left group" and a "right group"
 
 The most important part is to group the elements which need to be aligned on the left or right side, respectively, of the header, so that these groups are immediate children of the header (`#hd-X-left` and `#hd-X-right`).
 
-Then the header itself is declared a **flex container**, and `#hd-X-left` and `#hd-X-right` are its **flex items**. The flex items can be pushed to the left and right edges of the header by [`justify-content: space-between`](https://www.w3schools.com/cssref/playit.asp?filename=playcss_justify-content&preval=space-between):
+Then the header itself is declared a **flex container** by setting `display: flex`. This causes the "left group" and "right group" to be its **flex items**. We want one flex item at the left edge and one at the right edge of the header, so we set [`justify-content: space-between`](https://www.w3schools.com/cssref/playit.asp?filename=playcss_justify-content&preval=space-between) in the header element:
 
 ~~~css
 header {
