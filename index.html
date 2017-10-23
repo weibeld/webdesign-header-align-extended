@@ -2,24 +2,51 @@
 <html>
 
 <head>
-<title>Header Align</title>
+<title>Header Align Extended</title>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
+
 <body>
 
+  <!-- Header 1 -->
+  <p>Header 1: links are as small as possible.</p>
   <header id="hd-1">
-    <img src="image.png">
-    <div>Apple</div>
+    <!-- Left-aligned -->
+    <div id="hd-1-left">
+      <a id="hd-1-logo-container" href="http://apple.com">
+        <img class="logo hover" src="logo.png">
+      </a>
+      <a id="hd-1-title-container" href="index.html" class="hover">Apple</a>
+    </div>
+    <!-- Right-aligned -->
+    <form id="hd-1-right" action="index.html" method="get">
+      <input type="text" placeholder="Search..." name="query">
+      <button type="submit" class="hover">
+        <img src="search-white.svg">
+      </button>
+    </form>
   </header>
 
+  <!-- Header 2 -->
+  <p style="margin-top: 2rem;">Header 2: links extend to edges of header.</p>
   <header id="hd-2">
-    <div id="hd-2-img-div">
-      <img src="image.png">
+    <!-- Left-aligned -->
+    <div id="hd-2-left">
+      <a id="hd-2-logo-container" class="hover" href="http://apple.com">
+        <img class="logo" src="logo.png">
+      </a>
+      <a id="hd-2-title-container" href="index.html" class="hover">Apple</a>
     </div>
-    <div id="hd-2-title-div">Apple</div>
+    <!-- Right-aligned -->
+    <form id="hd-2-right" action="index.html" method="get">
+      <input type="text" placeholder="Search..." name="query">
+      <button type="submit" class="hover">
+        <img src="search-white.svg">
+      </button>
+    </form>
   </header>
 
 </html>
